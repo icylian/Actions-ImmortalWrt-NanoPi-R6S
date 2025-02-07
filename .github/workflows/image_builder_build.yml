@@ -111,15 +111,15 @@ jobs:
       - name: Add third-party packages (Mosdns & Mihomo)
         working-directory: immortalwrt-imagebuilder-rockchip-armv8.Linux-x86_64
         run: |
-          wget https://github.com/morytyann/OpenWrt-mihomo/releases/latest/download/mihomo_aarch64_generic.tar.gz
-          tar -zxvf mihomo_aarch64_generic.tar.gz -C ./packages
-          rm mihomo_aarch64_generic.tar.gz
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*luci-app-mosdns_.*_all.ipk" | wget -P ./packages -qi -
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*luci-i18n-mosdns-zh-cn.*all.ipk" | wget -P ./packages -qi -
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*mosdns_.*_aarch64_generic.ipk" | wget -P ./packages -qi -
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2dat_.*_aarch64_generic.ipk" | wget -P ./packages -qi -
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2ray-geoip_.*_all.ipk" | wget -P ./packages -qi -
-          curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2ray-geosite_.*_all.ipk" | wget -P ./packages -qi -
+          wget https://github.com/morytyann/OpenWrt-mihomo/releases/latest/download/mihomo_aarch64_generic-openwrt-24.10.tar.gz
+          tar -zxvf mihomo_aarch64_generic-openwrt-24.10.tar.gz -C ./packages
+          rm mihomo_aarch64_generic-openwrt-24.10.tar.gz
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*luci-app-mosdns_.*_all.ipk" | wget -P ./packages -qi -
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*luci-i18n-mosdns-zh-cn.*all.ipk" | wget -P ./packages -qi -
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*mosdns_.*_aarch64_generic.ipk" | wget -P ./packages -qi -
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2dat_.*_aarch64_generic.ipk" | wget -P ./packages -qi -
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2ray-geoip_.*_all.ipk" | wget -P ./packages -qi -
+          # curl -s https://api.github.com/repos/sbwml/luci-app-mosdns/releases/latest | grep -wo "https.*v2ray-geosite_.*_all.ipk" | wget -P ./packages -qi -
 
       - name: Compile
         working-directory: immortalwrt-imagebuilder-rockchip-armv8.Linux-x86_64
